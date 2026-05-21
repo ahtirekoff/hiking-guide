@@ -8,32 +8,88 @@
 </head>
 <body>
   <header class="hero">
-    <h1>Гид по походам для новичков</h1>
-    <p>Простой старт для тех, кто хочет безопасно выйти на первый маршрут.</p>
-    <button id="startButton">Начать подготовку</button>
+    <nav class="nav">
+      <div class="logo">Hiking Guide</div>
+      <a href="#request">Заявка</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="badge">Первый поход без хаоса</p>
+      <h1>Гид по походам для новичков</h1>
+      <p class="hero-text">
+        Поможем выбрать маршрут, собрать базовое снаряжение и подготовиться к первому выходу на природу.
+      </p>
+      <button id="startButton">Получить первый совет</button>
+    </div>
   </header>
 
   <main>
-    <section>
+    <section class="section">
       <h2>Для кого этот гид</h2>
-      <p>Для новичков, которые хотят понять, куда идти, что взять и как не наделать ошибок.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Для новичков</h3>
+          <p>Если ты ни разу не ходил в поход и не понимаешь, с чего начать.</p>
+        </article>
+
+        <article class="card">
+          <h3>Для городских</h3>
+          <p>Если хочется выбраться на природу, но страшно ошибиться с маршрутом.</p>
+        </article>
+
+        <article class="card">
+          <h3>Для самостоятельных</h3>
+          <p>Если хочешь не покупать тур, а разобраться и подготовиться самому.</p>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h2>Что внутри</h2>
-      <ul>
-        <li>Как выбрать первый маршрут</li>
-        <li>Что взять с собой</li>
-        <li>Как подготовиться физически</li>
-        <li>Какие ошибки избегать</li>
+    <section class="section accent">
+      <h2>Первый совет</h2>
+      <p id="checklistText">
+        Нажми кнопку выше, чтобы получить стартовую рекомендацию.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Базовый маршрут новичка</h2>
+      <ul class="list">
+        <li>Длина: 5–8 км</li>
+        <li>Рельеф: без резких подъёмов</li>
+        <li>Связь: маршрут рядом с населёнными пунктами</li>
+        <li>Формат: один день без ночёвки</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Мини-чеклист</h2>
-      <p id="checklistText">Нажми кнопку выше, чтобы получить первый совет.</p>
+    <section class="section">
+      <h2>Минимальное снаряжение</h2>
+      <div class="gear-grid">
+        <div>Рюкзак</div>
+        <div>Вода</div>
+        <div>Еда</div>
+        <div>Дождевик</div>
+        <div>Аптечка</div>
+        <div>Пауэрбанк</div>
+      </div>
+    </section>
+
+    <section class="section request" id="request">
+      <h2>Получить чеклист подготовки</h2>
+      <p>Оставь имя и цель похода. Форма пока учебная, данные никуда не отправляются.</p>
+
+      <form id="requestForm">
+        <input type="text" id="nameInput" placeholder="Имя">
+        <input type="text" id="goalInput" placeholder="Цель похода">
+        <button type="submit">Сформировать заявку</button>
+      </form>
+
+      <p id="formResult"></p>
     </section>
   </main>
+
+  <footer class="footer">
+    <p>Учебный проект по вайб-кодингу.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
