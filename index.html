@@ -51,6 +51,24 @@
       </p>
     </section>
 
+    <section class="section route-picker">
+      <h2>Подбор маршрута</h2>
+      <p>Выбери уровень подготовки, и сайт предложит подходящий формат похода.</p>
+
+      <div class="picker">
+        <select id="levelSelect">
+          <option value="">Выбери уровень</option>
+          <option value="beginner">Новичок</option>
+          <option value="middle">Средний уровень</option>
+          <option value="strong">Хорошая подготовка</option>
+        </select>
+
+        <button id="routeButton" type="button">Подобрать маршрут</button>
+      </div>
+
+      <p id="routeResult" class="route-result"></p>
+    </section>
+
     <section class="section">
       <h2>Базовый маршрут новичка</h2>
       <ul class="list">
